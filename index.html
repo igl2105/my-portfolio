@@ -88,188 +88,244 @@ body {
 }
 
 /* ================================================
-   BOOT / LOADING SEQUENCE
+   JAPANESE SLIDING DOORS (SHOJIS / FUSUMA GATEWAY)
 ================================================ */
-.boot {
+.shoji-gate {
   position: fixed;
   inset: 0;
-  background: #000;
-  z-index: 90000;
+  z-index: 95000;
+  pointer-events: all;
+  overflow: hidden;
+  background: #020308;
+  animation: gateDismiss 0.5s ease forwards 2.5s;
+}
+@keyframes gateDismiss {
+  0%   { opacity: 1; pointer-events: all; }
+  90%  { opacity: 0; pointer-events: none; }
+  100% { opacity: 0; pointer-events: none; display: none; }
+}
+
+/* Door Leaf (Left & Right halves) */
+.door-leaf {
+  position: absolute;
+  top: 0;
+  width: 50.2vw;
+  height: 100vh;
+  background: #0d080b;
+  overflow: hidden;
+  box-shadow: 0 0 60px rgba(0, 0, 0, 0.95);
+  z-index: 1;
+}
+
+.door-left {
+  left: 0;
+  border-right: 5px solid #281810;
+  animation: doorSlideLeft 1.2s cubic-bezier(0.77, 0, 0.175, 1) forwards 1.3s;
+}
+.door-right {
+  right: 0;
+  border-left: 5px solid #281810;
+  animation: doorSlideRight 1.2s cubic-bezier(0.77, 0, 0.175, 1) forwards 1.3s;
+}
+
+@keyframes doorSlideLeft {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-101%); }
+}
+@keyframes doorSlideRight {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(101%); }
+}
+
+/* Washi Paper Panel & Timber Borders */
+.door-washi {
+  position: absolute;
+  inset: 12px;
+  background:
+    radial-gradient(ellipse 80% 70% at 50% 50%, rgba(220, 195, 160, 0.09) 0%, rgba(10, 8, 12, 0.95) 100%),
+    linear-gradient(180deg, #100b0e 0%, #171114 50%, #0d080b 100%);
+  border: 12px solid #1a110c;
+  box-shadow: inset 0 0 40px rgba(0,0,0,0.85), 0 0 15px rgba(0,0,0,0.9);
+  overflow: hidden;
+}
+
+/* Kumiko Traditional Wood Lattice Pattern */
+.door-kumiko {
+  position: absolute;
+  inset: 0;
+  background-image:
+    repeating-linear-gradient(0deg, transparent, transparent 52px, rgba(190, 140, 95, 0.18) 52px, rgba(190, 140, 95, 0.18) 55px),
+    repeating-linear-gradient(90deg, transparent, transparent 40px, rgba(190, 140, 95, 0.15) 40px, rgba(190, 140, 95, 0.15) 43px);
+  opacity: 0.95;
+}
+
+/* Faint Sumi-e Japanese Kanji Watermark */
+.door-kanji-watermark {
+  position: absolute;
+  top: 50%;
+  font-family: var(--font-kanji);
+  font-size: min(34vw, 320px);
+  color: rgba(204, 26, 26, 0.05);
+  line-height: 1;
+  user-select: none;
+  pointer-events: none;
+  transform: translateY(-50%);
+  filter: blur(1px);
+}
+.door-left .door-kanji-watermark { right: 12%; }
+.door-right .door-kanji-watermark { left: 12%; }
+
+/* Brass Corner Reinforcement Brackets */
+.door-corner {
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  border: 2px solid rgba(212, 175, 55, 0.55);
+  box-shadow: 0 0 8px rgba(212, 175, 55, 0.25);
+}
+.door-corner.tl { top: 6px; left: 6px; border-right: 0; border-bottom: 0; }
+.door-corner.bl { bottom: 6px; left: 6px; border-right: 0; border-top: 0; }
+.door-corner.tr { top: 6px; right: 6px; border-left: 0; border-bottom: 0; }
+.door-corner.br { bottom: 6px; right: 6px; border-left: 0; border-top: 0; }
+
+/* Recessed Traditional Japanese Handles (Hikite) */
+.door-handle {
+  position: absolute;
+  top: 50%;
+  width: 38px;
+  height: 68px;
+  background: radial-gradient(circle, #2a1f18 0%, #0d0907 80%);
+  border: 2px solid #5a3d28;
+  border-radius: 20px;
+  transform: translateY(-50%);
+  box-shadow: inset 0 0 8px #000, 0 0 12px rgba(0,0,0,0.9);
+}
+.handle-left { right: 20px; }
+.handle-right { left: 20px; }
+.handle-inner {
+  position: absolute;
+  inset: 6px 4px;
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  border-radius: 14px;
+  background: #150f0c;
+}
+
+/* Central Kammon / Gate Seal */
+.gate-seal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 28px;
-  animation: bootWipe 0.9s cubic-bezier(0.7,0,1,1) forwards 5.2s;
-  overflow: hidden;
+  text-align: center;
+  animation: sealPart 1.1s cubic-bezier(0.77, 0, 0.175, 1) forwards 1.25s;
+  pointer-events: none;
 }
 
-@keyframes bootWipe {
-  0%   { clip-path: inset(0 0 0 0); }
-  100% { clip-path: inset(0 0 100% 0); pointer-events: none; opacity: 0; }
+@keyframes sealPart {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+    filter: brightness(1);
+  }
+  35% {
+    transform: translate(-50%, -50%) scale(1.15);
+    opacity: 1;
+    filter: brightness(1.8) drop-shadow(0 0 30px var(--sharingan));
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(0.6);
+    opacity: 0;
+    filter: brightness(2) blur(10px);
+  }
 }
 
-/* Ink wash behind boot */
-.boot-ink {
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(ellipse 80% 60% at 50% 50%, rgba(139,0,0,0.12) 0%, transparent 70%);
-  animation: inkPulse 3s ease-in-out infinite;
-}
-
-@keyframes inkPulse {
-  0%,100% { opacity: 0.4; }
-  50%     { opacity: 1; }
-}
-
-/* Big Sharingan spinner in boot */
-.boot-sharingan {
-  position: relative;
-  width: 140px; height: 140px;
-}
-
-.bs-ring {
+.seal-ring {
   position: absolute;
   border-radius: 50%;
-  border: 2px solid;
-  top: 50%; left: 50%;
-  transform: translate(-50%,-50%);
-  animation: bsRingSpin var(--brt) linear infinite var(--brr);
+  border: 1.5px solid rgba(204, 26, 26, 0.85);
+  box-shadow: var(--glow-sharingan);
+  animation: sealRingSpin 6s linear infinite;
+}
+.seal-ring.outer {
+  width: 140px;
+  height: 140px;
+  border-style: dashed;
+}
+.seal-ring.inner {
+  width: 110px;
+  height: 110px;
+  border-color: rgba(212, 175, 55, 0.65);
+  animation-direction: reverse;
+  animation-duration: 4s;
+}
+@keyframes sealRingSpin {
+  to { transform: rotate(360deg); }
 }
 
-.bs-r1 { width:140px; height:140px; border-color: rgba(204,26,26,0.8); --brt:4s; --brr:normal;
-  box-shadow: 0 0 20px rgba(204,26,26,0.4), inset 0 0 20px rgba(204,26,26,0.1); }
-.bs-r2 { width:110px; height:110px; border-color: rgba(139,0,0,0.5); --brt:3s; --brr:reverse; }
-.bs-r3 { width:80px; height:80px; border-color: rgba(204,26,26,0.6); --brt:5s; --brr:normal;  }
+.seal-emblem {
+  position: relative;
+  width: 90px;
+  height: 90px;
+  background: radial-gradient(circle, #4a0000 0%, #150000 70%, #000 100%);
+  border-radius: 50%;
+  border: 2px solid var(--sharingan);
+  box-shadow: 0 0 25px rgba(204, 26, 26, 0.8), inset 0 0 15px rgba(204, 26, 26, 0.5);
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-@keyframes bsRingSpin { to { transform: translate(-50%,-50%) rotate(360deg); } }
+.seal-pupil {
+  width: 20px;
+  height: 20px;
+  background: radial-gradient(circle, #1a0000 0%, #000 100%);
+  border-radius: 50%;
+  border: 1px solid rgba(204, 26, 26, 0.6);
+  box-shadow: 0 0 10px rgba(204, 26, 26, 0.8);
+}
 
-/* Tomoe */
-.bs-tomoe {
+.seal-tomoe {
   position: absolute;
-  width: 12px; height: 12px;
+  width: 10px;
+  height: 10px;
   background: var(--sharingan);
   border-radius: 50% 50% 50% 0;
-  top: 50%; left: 50%;
-  transform-origin: 0 0;
   box-shadow: var(--glow-sharingan);
-  animation: tomeOrbit 4s linear infinite;
+  animation: sealTomoeOrbit 3s linear infinite;
 }
-.bs-tomoe:nth-child(4) { animation-delay: 0s; }
-.bs-tomoe:nth-child(5) { animation-delay: -1.33s; }
-.bs-tomoe:nth-child(6) { animation-delay: -2.66s; }
-@keyframes tomeOrbit {
-  0%   { transform: translate(-6px,-6px) rotate(0deg)   translateX(40px) rotate(0deg); }
-  100% { transform: translate(-6px,-6px) rotate(360deg) translateX(40px) rotate(-360deg); }
+.seal-tomoe.t1 { animation-delay: 0s; }
+.seal-tomoe.t2 { animation-delay: -1s; }
+.seal-tomoe.t3 { animation-delay: -2s; }
+
+@keyframes sealTomoeOrbit {
+  0%   { transform: translate(-5px, -5px) rotate(0deg) translateX(26px) rotate(0deg); }
+  100% { transform: translate(-5px, -5px) rotate(360deg) translateX(26px) rotate(-360deg); }
 }
 
-.bs-pupil {
-  position: absolute;
-  width: 30px; height: 30px;
-  background: radial-gradient(circle, #300 0%, #8b0000 50%, #000 100%);
-  border-radius: 50%;
-  top: 50%; left: 50%;
-  transform: translate(-50%,-50%);
-  box-shadow: var(--glow-sharingan);
-  animation: pupilPulse 2s ease-in-out infinite;
-}
-@keyframes pupilPulse {
-  0%,100% { transform: translate(-50%,-50%) scale(1); box-shadow: var(--glow-sharingan); }
-  50%     { transform: translate(-50%,-50%) scale(1.15); box-shadow: 0 0 20px #cc1a1a, 0 0 60px rgba(204,26,26,0.6); }
-}
-
-.boot-title {
+.seal-title {
   font-family: var(--font-title);
-  font-size: 13px;
-  letter-spacing: 8px;
-  color: var(--sharingan);
+  font-size: 14px;
+  letter-spacing: 6px;
+  color: var(--spark);
+  text-shadow: 0 0 12px var(--chidori), 0 0 24px var(--sharingan);
   text-transform: uppercase;
-  text-shadow: var(--glow-sharingan);
-  animation: bootTitleFlicker 0.3s steps(2) infinite;
+  margin-bottom: 6px;
+  white-space: nowrap;
 }
-@keyframes bootTitleFlicker {
-  0%,90% { opacity: 1; }
-  95%    { opacity: 0.2; }
-}
-
-/* Boot percentage */
-@property --bpct {
-  syntax: '<integer>';
-  initial-value: 0;
-  inherits: false;
-}
-.boot-pct {
-  font-family: var(--font-title);
-  font-size: 80px;
-  line-height: 1;
-  letter-spacing: -2px;
-  --bpct: 0;
-  animation: bpctCount 4.8s cubic-bezier(0.4,0,0.2,1) forwards;
-  counter-reset: bpc var(--bpct);
-  background: linear-gradient(135deg, var(--parchment) 20%, var(--sharingan) 70%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-.boot-pct::after { content: counter(bpc) "%"; }
-@keyframes bpctCount {
-  0%   { --bpct: 0; }
-  25%  { --bpct: 28; }
-  50%  { --bpct: 61; }
-  80%  { --bpct: 89; }
-  100% { --bpct: 100; }
-}
-
-.boot-bar-wrap {
-  width: 360px; height: 2px;
-  background: rgba(204,26,26,0.1);
-  position: relative; overflow: visible;
-}
-.boot-bar-fill {
-  height: 100%;
-  background: linear-gradient(90deg, var(--blood), var(--sharingan), var(--tomoe));
-  background-size: 200%;
-  animation: bbarFill 4.8s cubic-bezier(0.4,0,0.2,1) forwards, bbarGrad 2s linear infinite;
-  box-shadow: 0 0 12px var(--sharingan), 0 0 30px rgba(204,26,26,0.4);
-}
-@keyframes bbarFill {
-  0%   { width: 0%; }
-  25%  { width: 28%; }
-  50%  { width: 61%; }
-  80%  { width: 89%; }
-  100% { width: 100%; }
-}
-@keyframes bbarGrad {
-  0%   { background-position: 0%; }
-  100% { background-position: 200%; }
-}
-
-.boot-log {
+.seal-subtitle {
   font-family: var(--font-mono);
   font-size: 9px;
-  letter-spacing: 1px;
-  color: rgba(204,26,26,0.4);
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  width: 360px;
+  letter-spacing: 3px;
+  color: rgba(212, 175, 55, 0.8);
+  text-transform: uppercase;
+  white-space: nowrap;
 }
-.boot-log div {
-  opacity: 0;
-  animation: blogIn 0.3s ease forwards;
-  display: flex; gap: 12px;
-}
-.boot-log div:nth-child(1) { animation-delay: 0.3s; }
-.boot-log div:nth-child(2) { animation-delay: 0.9s; }
-.boot-log div:nth-child(3) { animation-delay: 1.6s; }
-.boot-log div:nth-child(4) { animation-delay: 2.3s; }
-.boot-log div:nth-child(5) { animation-delay: 3.1s; }
-.boot-log div:nth-child(6) { animation-delay: 3.8s; }
-@keyframes blogIn {
-  from { opacity:0; transform: translateX(-8px); }
-  to   { opacity:1; transform: translateX(0); }
-}
-.ok  { color: #4a7c2f; }
-.warn{ color: var(--sharingan); }
 
 /* ================================================
    UNIVERSE — INK + MIST WORLD
@@ -427,7 +483,7 @@ body {
 .hud {
   position: fixed; inset: 0; z-index: 9980; pointer-events: none;
   opacity: 0;
-  animation: hudReveal 0.6s ease forwards 5.5s;
+  animation: hudReveal 0.6s ease forwards 1.9s;
 }
 @keyframes hudReveal { to { opacity: 1; } }
 
@@ -556,7 +612,7 @@ body {
 
 .hero-text {
   position: relative; z-index: 20; text-align: center;
-  opacity: 0; animation: heroReveal 1.6s cubic-bezier(0.16,1,0.3,1) forwards 5.5s;
+  opacity: 0; animation: heroReveal 1.2s cubic-bezier(0.16,1,0.3,1) forwards 1.7s;
 }
 @keyframes heroReveal {
   from { opacity:0; transform: translateY(50px); filter: blur(16px); }
@@ -586,7 +642,7 @@ body {
 .pre-label {
   font-family: var(--font-mono); font-size: 9px; letter-spacing: 10px;
   color: rgba(126,200,227,0.5); text-transform: uppercase; display: block;
-  margin-bottom: 24px; animation: labelBreath 4s ease-in-out infinite 6s;
+  margin-bottom: 24px; animation: labelBreath 4s ease-in-out infinite 2.2s;
 }
 @keyframes labelBreath {
   0%,100% { letter-spacing: 10px; opacity: 0.5; }
@@ -604,7 +660,7 @@ body {
   background: linear-gradient(135deg, var(--parchment) 0%, #fff 30%, var(--parchment) 50%, var(--sharingan) 75%, var(--parchment) 100% );
   background-size: 300% 300%; -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: titleShimmer 8s ease-in-out infinite 6s;
+  animation: titleShimmer 8s ease-in-out infinite 2.2s;
   filter: drop-shadow(0 0 20px rgba(204,26,26,0.3));
 }
 @keyframes titleShimmer {
@@ -642,7 +698,7 @@ body {
   margin: 0 auto;
   padding: 0 20px 100px;
   opacity: 0;
-  animation: fadeContent 1s ease forwards 6.5s;
+  animation: fadeContent 1s ease forwards 2.3s;
 }
 @keyframes fadeContent { to { opacity: 1; } }
 
@@ -1037,32 +1093,46 @@ body {
 <div class="cursor-outer"></div>
 <div class="cursor-inner"></div>
 
-<div class="boot">
-  <div class="boot-ink"></div>
-  <div class="boot-sharingan">
-    <div class="bs-ring bs-r1"></div>
-    <div class="bs-ring bs-r2"></div>
-    <div class="bs-ring bs-r3"></div>
-    <div class="bs-tomoe"></div>
-    <div class="bs-tomoe"></div>
-    <div class="bs-tomoe"></div>
-    <div class="bs-pupil"></div>
+<!-- JAPANESE SLIDING DOORS (KAIMON GATEWAY) -->
+<div class="shoji-gate">
+  <!-- Left Sliding Door Leaf -->
+  <div class="door-leaf door-left">
+    <div class="door-washi">
+      <div class="door-kumiko"></div>
+      <div class="door-kanji-watermark">開</div>
+      <div class="door-corner tl"></div>
+      <div class="door-corner bl"></div>
+      <div class="door-handle handle-left">
+        <div class="handle-inner"></div>
+      </div>
+    </div>
   </div>
-  
-  <div class="boot-title">System Initialization</div>
-  <div class="boot-pct"></div>
-  
-  <div class="boot-bar-wrap">
-    <div class="boot-bar-fill"></div>
+
+  <!-- Right Sliding Door Leaf -->
+  <div class="door-leaf door-right">
+    <div class="door-washi">
+      <div class="door-kumiko"></div>
+      <div class="door-kanji-watermark">門</div>
+      <div class="door-corner tr"></div>
+      <div class="door-corner br"></div>
+      <div class="door-handle handle-right">
+        <div class="handle-inner"></div>
+      </div>
+    </div>
   </div>
-  
-  <div class="boot-log">
-    <div class="ok"><span>></span> CHECKING PYTHON ENV... OK</div>
-    <div class="ok"><span>></span> LOADING NUMPY/PANDAS MODULES... OK</div>
-    <div class="ok"><span>></span> CONNECTING TO FLUTTER FRAMEWORK... OK</div>
-    <div class="warn"><span>></span> SHARINGAN EYE TRACKING... ACTIVE</div>
-    <div class="ok"><span>></span> FETCHING RESUME DATA [Vatsal_Resume.pdf]... DONE</div>
-    <div class="ok"><span>></span> WELCOME, DEVELOPER VACHHANI.</div>
+
+  <!-- Center Clan Mon / Gate Seal -->
+  <div class="gate-seal">
+    <div class="seal-ring outer"></div>
+    <div class="seal-ring inner"></div>
+    <div class="seal-emblem">
+      <div class="seal-pupil"></div>
+      <div class="seal-tomoe t1"></div>
+      <div class="seal-tomoe t2"></div>
+      <div class="seal-tomoe t3"></div>
+    </div>
+    <div class="seal-title">開門 // ENTER REALM</div>
+    <div class="seal-subtitle">VATSAL VACHHANI · SHARINGAN ARCHIVES</div>
   </div>
 </div>
 
@@ -1594,6 +1664,24 @@ filterButtons.forEach(btn => {
     });
   });
 });
+
+// Shoji Gate Click-to-Open Interactivity
+const shojiGate = document.querySelector('.shoji-gate');
+if (shojiGate) {
+  shojiGate.addEventListener('click', () => {
+    const doorLeft = document.querySelector('.door-left');
+    const doorRight = document.querySelector('.door-right');
+    const gateSeal = document.querySelector('.gate-seal');
+    if (doorLeft && doorRight) {
+      doorLeft.style.animation = 'doorSlideLeft 0.7s cubic-bezier(0.77, 0, 0.175, 1) forwards';
+      doorRight.style.animation = 'doorSlideRight 0.7s cubic-bezier(0.77, 0, 0.175, 1) forwards';
+      if (gateSeal) gateSeal.style.animation = 'sealPart 0.4s cubic-bezier(0.77, 0, 0.175, 1) forwards';
+      setTimeout(() => {
+        shojiGate.style.display = 'none';
+      }, 750);
+    }
+  });
+}
 </script>
 
 </body>
