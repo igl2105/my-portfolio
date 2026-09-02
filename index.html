@@ -3,9 +3,72 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vatsal Vachhani — AI & Full-Stack Software Developer</title>
-  <meta name="description" content="Portfolio of Vatsal Vachhani — Software Developer specializing in AI, RAG Pipelines, Computer Vision, FastAPI, and Full-Stack Engineering.">
+
+  <!-- ==========================================================
+       PRIMARY SEO & META ARCHITECTURE (Senior Technical SEO)
+  ========================================================== -->
+  <title>Vatsal Vachhani | AI Engineer & Full-Stack Systems Developer (RAG, Python, React)</title>
+  <meta name="title" content="Vatsal Vachhani | AI Engineer & Full-Stack Systems Developer (RAG, Python, React)">
+  <meta name="description" content="Official portfolio of Vatsal Vachhani — AI Engineer at Trusted Communities specializing in Production RAG Architectures, LLM Agents, Computer Vision, FastAPI Microservices, and React 19 Web Platforms.">
+  <meta name="keywords" content="Vatsal Vachhani, AI Engineer, Machine Learning Engineer, RAG Developer, LangChain, FAISS, FastAPI, Python Developer, React 19 Developer, Computer Vision, OCR Automation, Trusted Communities, TC Universal">
   <meta name="author" content="Vatsal Vachhani">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <link rel="canonical" href="https://my-portfolio-ochre-omega-16.vercel.app/">
+  <meta name="theme-color" content="#06070a">
+
+  <!-- Open Graph / Facebook / LinkedIn / Discord -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://my-portfolio-ochre-omega-16.vercel.app/">
+  <meta property="og:title" content="Vatsal Vachhani | AI Engineer & Full-Stack Systems Developer">
+  <meta property="og:description" content="Explore production RAG pipelines, high-speed OCR extraction engines, and modern full-stack web platforms engineered by Vatsal Vachhani.">
+  <meta property="og:site_name" content="Vatsal Vachhani Portfolio">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://my-portfolio-ochre-omega-16.vercel.app/">
+  <meta name="twitter:title" content="Vatsal Vachhani | AI Engineer & Full-Stack Systems Developer">
+  <meta name="twitter:description" content="Official engineering portfolio of Vatsal Vachhani — AI Engineer specializing in RAG architectures, LLM workflows, Computer Vision, and FastAPI microservices.">
+
+  <!-- JSON-LD Structured Data: Schema.org ProfilePage & Person -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    "mainEntity": {
+      "@type": "Person",
+      "name": "Vatsal Vachhani",
+      "alternateName": "igl2105",
+      "jobTitle": "AI Engineer",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Trusted Communities"
+      },
+      "alumniOf": {
+        "@type": "EducationalOrganization",
+        "name": "B.Tech in Computer Science and Engineering"
+      },
+      "url": "https://my-portfolio-ochre-omega-16.vercel.app/",
+      "sameAs": [
+        "https://github.com/igl2105",
+        "https://github.com/TCUNIVERSAL"
+      ],
+      "knowsAbout": [
+        "Artificial Intelligence",
+        "Retrieval-Augmented Generation (RAG)",
+        "Large Language Models (LLMs)",
+        "Computer Vision",
+        "Optical Character Recognition (OCR)",
+        "FastAPI",
+        "Python",
+        "React",
+        "Docker",
+        "FAISS Vector Database",
+        "LangChain"
+      ]
+    }
+  }
+  </script>
 
   <!-- Google Fonts: Plus Jakarta Sans, Outfit & JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -293,7 +356,7 @@
       font-weight: 800;
       line-height: 1.08;
       letter-spacing: -0.03em;
-      max-width: 960px;
+      max-width: 980px;
       margin-bottom: 24px;
     }
 
@@ -307,7 +370,7 @@
     .hero-subtitle {
       font-size: clamp(16px, 2vw, 20px);
       color: var(--text-secondary);
-      max-width: 700px;
+      max-width: 760px;
       margin: 0 auto 36px;
       font-weight: 400;
       line-height: 1.6;
@@ -486,7 +549,7 @@
 
     .section-header {
       text-align: center;
-      max-width: 650px;
+      max-width: 720px;
       margin: 0 auto 50px;
     }
 
@@ -920,7 +983,7 @@
     .footer-desc {
       font-size: 16px;
       color: var(--text-secondary);
-      max-width: 550px;
+      max-width: 600px;
       margin: 0 auto 32px;
     }
 
@@ -979,590 +1042,594 @@
 
   <!-- Ambient Background System -->
   <div class="spatial-grid"></div>
-  <canvas id="ambient-canvas"></canvas>
-  <div class="horizon-glow"></div>
-  <div class="horizon-line"></div>
+  <canvas id="ambient-canvas" aria-hidden="true"></canvas>
+  <div class="horizon-glow" aria-hidden="true"></div>
+  <div class="horizon-line" aria-hidden="true"></div>
 
   <!-- Floating Glass Navbar -->
-  <nav class="nav-container">
-    <div class="nav-pill">
-      <a href="#" class="nav-brand">
+  <header class="nav-container">
+    <nav class="nav-pill" aria-label="Primary Navigation">
+      <a href="#" class="nav-brand" aria-label="Vatsal Vachhani Homepage">
         <div class="brand-dot">VV</div>
         <span>Vatsal Vachhani</span>
       </a>
 
       <ul class="nav-links">
         <li><a href="#overview" class="nav-link">Overview</a></li>
-        <li><a href="#skills" class="nav-link">Expertise</a></li>
-        <li><a href="#projects" class="nav-link">Projects</a></li>
-        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#skills" class="nav-link">Technical Stack</a></li>
+        <li><a href="#projects" class="nav-link">Engineering Work</a></li>
+        <li><a href="#experience" class="nav-link">Career</a></li>
       </ul>
 
-      <a href="Vatsal_Resume.pdf" download="Vatsal_Resume_CV.pdf" class="nav-cta">
-        <span>📄</span> Resume
+      <a href="Vatsal_Resume.pdf" download="Vatsal_Resume_CV.pdf" class="nav-cta" aria-label="Download Vatsal Vachhani Resume PDF">
+        <span>📄</span> Download CV
       </a>
-    </div>
-  </nav>
+    </nav>
+  </header>
 
   <!-- Hero Section -->
-  <section class="hero" id="overview">
-    <div class="status-badge">
-      <span class="pulse-dot"></span>
-      <span>AI Engineer @ Trusted Communities · March 2026 – Present</span>
-    </div>
-
-    <h1 class="hero-title">
-      Architecting <span class="gradient-text">Intelligent AI Systems</span> & Modern Web Platforms.
-    </h1>
-
-    <p class="hero-subtitle">
-      Hi, I'm <strong>Vatsal Vachhani</strong>. Software Developer focused on Retrieval-Augmented Generation (RAG), Computer Vision pipelines, FastAPI microservices, and reactive full-stack web applications.
-    </p>
-
-    <div class="hero-actions">
-      <a href="#projects" class="btn-primary">
-        <span>⚡</span> Explore Projects
-      </a>
-      <a href="Vatsal_Resume.pdf" download="Vatsal_Resume_CV.pdf" class="btn-secondary">
-        <span>📥</span> Download CV
-      </a>
-      <a href="https://github.com/igl2105" target="_blank" rel="noopener noreferrer" class="btn-secondary">
-        <span>📂</span> GitHub @igl2105
-      </a>
-    </div>
-
-    <!-- Floating Interactive Reflection Cards -->
-    <div class="hero-floating-grid">
-      <div class="floating-card float-1">
-        <div class="card-icon">🧠</div>
-        <h3 class="card-title">RAG & LLM Engineering</h3>
-        <p class="card-desc">Production vector retrieval systems using FAISS, LangChain, Groq Llama-3.3-70B, and conversational semantic memory.</p>
-        <div class="card-metric">⚡ Sub-second Latency</div>
+  <main>
+    <section class="hero" id="overview" aria-labelledby="hero-heading">
+      <div class="status-badge">
+        <span class="pulse-dot" aria-hidden="true"></span>
+        <span>AI Engineer @ Trusted Communities · March 2026 – Present</span>
       </div>
 
-      <div class="floating-card float-2">
-        <div class="card-icon">👁️</div>
-        <h3 class="card-title">Computer Vision & OCR</h3>
-        <p class="card-desc">Rapid document extraction engines with OpenCV deskewing, ONNX RapidOCR, and Gemini 2.0 Flash Vision fallback.</p>
-        <div class="card-metric">🚀 1,200+ Cards / Hr</div>
-      </div>
+      <h1 class="hero-title" id="hero-heading">
+        Engineering <span class="gradient-text">Production AI Systems</span>, High-Performance RAG Pipelines & Modern Web Apps.
+      </h1>
 
-      <div class="floating-card float-3">
-        <div class="card-icon">⚡</div>
-        <h3 class="card-title">Full-Stack & Cloud</h3>
-        <p class="card-desc">Scalable reactive platforms built with React 19, FastAPI, Supabase real-time sync, and Docker containerization.</p>
-        <div class="card-metric">🌐 12+ Live Missions</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Technical Mastery & Skills Universe -->
-  <section class="section-wrap" id="skills">
-    <div class="section-header">
-      <span class="section-tag">Ninjutsu Arsenal</span>
-      <h2 class="section-title">Technical Expertise</h2>
-      <p class="section-desc">A refined toolchain built for high-throughput AI systems, vector pipelines, and modern web architectures.</p>
-    </div>
-
-    <div class="skills-universe-grid">
-      <!-- Group 1 -->
-      <div class="skill-group-card">
-        <div class="skill-group-header">
-          <div class="skill-group-icon">🤖</div>
-          <h3 class="skill-group-name">AI & Vector Search</h3>
-        </div>
-        <div class="skill-pills-wrap">
-          <span class="skill-pill">Python</span>
-          <span class="skill-pill">RAG Architectures</span>
-          <span class="skill-pill">FAISS Vector DB</span>
-          <span class="skill-pill">LangChain</span>
-          <span class="skill-pill">Groq (Llama-3.3-70B)</span>
-          <span class="skill-pill">Gemini 2.0 Flash</span>
-          <span class="skill-pill">Sentence-Transformers</span>
-        </div>
-      </div>
-
-      <!-- Group 2 -->
-      <div class="skill-group-card">
-        <div class="skill-group-header">
-          <div class="skill-group-icon">👁️</div>
-          <h3 class="skill-group-name">Computer Vision & Data</h3>
-        </div>
-        <div class="skill-pills-wrap">
-          <span class="skill-pill">OpenCV</span>
-          <span class="skill-pill">RapidOCR (ONNX)</span>
-          <span class="skill-pill">Tesseract OCR</span>
-          <span class="skill-pill">PyShark / Wireshark</span>
-          <span class="skill-pill">Pandas</span>
-          <span class="skill-pill">NumPy</span>
-          <span class="skill-pill">Scikit-Learn</span>
-        </div>
-      </div>
-
-      <!-- Group 3 -->
-      <div class="skill-group-card">
-        <div class="skill-group-header">
-          <div class="skill-group-icon">⚙️</div>
-          <h3 class="skill-group-name">Backend & Systems</h3>
-        </div>
-        <div class="skill-pills-wrap">
-          <span class="skill-pill">FastAPI</span>
-          <span class="skill-pill">Flask</span>
-          <span class="skill-pill">Node.js</span>
-          <span class="skill-pill">Express</span>
-          <span class="skill-pill">MongoDB Atlas</span>
-          <span class="skill-pill">Supabase / SQL</span>
-          <span class="skill-pill">Docker</span>
-          <span class="skill-pill">REST APIs</span>
-        </div>
-      </div>
-
-      <!-- Group 4 -->
-      <div class="skill-group-card">
-        <div class="skill-group-header">
-          <div class="skill-group-icon">🎨</div>
-          <h3 class="skill-group-name">Frontend & Interfaces</h3>
-        </div>
-        <div class="skill-pills-wrap">
-          <span class="skill-pill">React 19 / 18</span>
-          <span class="skill-pill">Vite</span>
-          <span class="skill-pill">Tailwind CSS</span>
-          <span class="skill-pill">TanStack Query</span>
-          <span class="skill-pill">Zustand</span>
-          <span class="skill-pill">Framer Motion</span>
-          <span class="skill-pill">GSAP</span>
-          <span class="skill-pill">Flutter / Dart</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Featured Projects & Missions -->
-  <section class="section-wrap" id="projects">
-    <div class="section-header">
-      <span class="section-tag">Featured Missions</span>
-      <h2 class="section-title">Production Systems & Artifacts</h2>
-      <p class="section-desc">Selected work spanning RAG agents, real-time agency platforms, and vision automation across @igl2105 & @TCUNIVERSAL.</p>
-    </div>
-
-    <!-- Category Filter Bar -->
-    <div class="filter-bar">
-      <button class="filter-btn active" data-filter="all">All Projects [12]</button>
-      <button class="filter-btn" data-filter="ai-rag">AI & RAG [4]</button>
-      <button class="filter-btn" data-filter="cv-ocr">Computer Vision [2]</button>
-      <button class="filter-btn" data-filter="fullstack">Full-Stack & Agency [3]</button>
-      <button class="filter-btn" data-filter="ml-auto">ML & Systems [3]</button>
-    </div>
-
-    <div class="projects-grid">
-
-      <!-- Project 01: RevFlow AI -->
-      <div class="project-card" data-category="ai-rag">
-        <div>
-          <div class="p-top">
-            <span class="p-badge p-badge-ai">AI Revenue Optimization</span>
-            <span class="p-num">01</span>
-          </div>
-          <h3 class="p-title">RevFlow — AI Hotel Revenue Management</h3>
-          <p class="p-desc">
-            AI-powered hospitality revenue management platform delivering dynamic room pricing optimization, occupancy forecasting, and automated revenue algorithms through a sleek minimalist dashboard.
-          </p>
-          <div class="p-tech-list">
-            <span class="p-tech-pill">React</span>
-            <span class="p-tech-pill">AI / ML</span>
-            <span class="p-tech-pill">FastAPI</span>
-            <span class="p-tech-pill">Data Pipeline</span>
-            <span class="p-tech-pill">Tailwind CSS</span>
-          </div>
-        </div>
-        <div class="p-actions">
-          <a href="https://revflow-ai.vercel.app/" target="_blank" rel="noopener noreferrer" class="p-btn-live">
-            <span>⚡</span> Live Transmission
-          </a>
-        </div>
-      </div>
-
-      <!-- Project 02: ThreeDot Software Solutions -->
-      <div class="project-card" data-category="fullstack">
-        <div>
-          <div class="p-top">
-            <span class="p-badge p-badge-tc">TC Universal Agency</span>
-            <span class="p-num">02</span>
-          </div>
-          <h3 class="p-title">ThreeDot AI Solutions Platform</h3>
-          <p class="p-desc">
-            High-performance AI solutions & digital agency platform engineered under TC Universal. Features smooth inertial scrolling (Lenis), cinematic GSAP timeline animations, and responsive interactive showcase.
-          </p>
-          <div class="p-tech-list">
-            <span class="p-tech-pill">React 18</span>
-            <span class="p-tech-pill">Vite</span>
-            <span class="p-tech-pill">GSAP</span>
-            <span class="p-tech-pill">Lenis Scroll</span>
-            <span class="p-tech-pill">Tailwind CSS</span>
-          </div>
-        </div>
-        <div class="p-actions">
-          <a href="https://threedot-ai-solutions.vercel.app/" target="_blank" rel="noopener noreferrer" class="p-btn-live">
-            <span>⚡</span> Live Transmission
-          </a>
-          <a href="https://github.com/TCUNIVERSAL/ThreeDot-website" target="_blank" rel="noopener noreferrer" class="p-btn-code">
-            <span>📂</span> Repo
-          </a>
-        </div>
-      </div>
-
-      <!-- Project 03: Taskflow -->
-      <div class="project-card" data-category="fullstack">
-        <div>
-          <div class="p-top">
-            <span class="p-badge p-badge-tc">TC Universal App</span>
-            <span class="p-num">03</span>
-          </div>
-          <h3 class="p-title">Taskflow Workflow Management Suite</h3>
-          <p class="p-desc">
-            Modern collaborative task and project management suite. Implements real-time Supabase database sync, optimistic UI state caching via TanStack Query and Zustand, and strict schemas with Zod.
-          </p>
-          <div class="p-tech-list">
-            <span class="p-tech-pill">React 19</span>
-            <span class="p-tech-pill">Vite</span>
-            <span class="p-tech-pill">Supabase</span>
-            <span class="p-tech-pill">TanStack Query</span>
-            <span class="p-tech-pill">Zustand</span>
-            <span class="p-tech-pill">Zod</span>
-          </div>
-        </div>
-        <div class="p-actions">
-          <a href="https://taskflow-theta-self.vercel.app/dashboard" target="_blank" rel="noopener noreferrer" class="p-btn-live">
-            <span>⚡</span> Live Transmission
-          </a>
-          <a href="https://github.com/TCUNIVERSAL/Taskflow" target="_blank" rel="noopener noreferrer" class="p-btn-code">
-            <span>📂</span> Repo
-          </a>
-        </div>
-      </div>
-
-      <!-- Project 04: RAG-Based AI Assistant -->
-      <div class="project-card" data-category="ai-rag">
-        <div>
-          <div class="p-top">
-            <span class="p-badge p-badge-ai">Production RAG</span>
-            <span class="p-num">04</span>
-          </div>
-          <h3 class="p-title">RAG-Based AI Assistant</h3>
-          <p class="p-desc">
-            Retrieval-Augmented Generation assistant engineered for Very Mulberry farm (USA). Leverages Groq (Llama-3.3-70B) and FAISS vector embeddings to deliver grounded seasonal advice and pricing with session memory.
-          </p>
-          <div class="p-tech-list">
-            <span class="p-tech-pill">React</span>
-            <span class="p-tech-pill">Flask</span>
-            <span class="p-tech-pill">FAISS</span>
-            <span class="p-tech-pill">Groq Llama-3.3-70B</span>
-            <span class="p-tech-pill">MongoDB</span>
-            <span class="p-tech-pill">Docker</span>
-          </div>
-        </div>
-        <div class="p-actions">
-          <a href="https://github.com/igl2105/RAG-Based-Ai-Assistant" target="_blank" rel="noopener noreferrer" class="p-btn-code">
-            <span>📂</span> View Repo
-          </a>
-        </div>
-      </div>
-
-      <!-- Project 05: RAG-Based Python Tutor -->
-      <div class="project-card" data-category="ai-rag">
-        <div>
-          <div class="p-top">
-            <span class="p-badge p-badge-ai">LLM Knowledge Base</span>
-            <span class="p-num">05</span>
-          </div>
-          <h3 class="p-title">RAG-Based Python Tutor</h3>
-          <p class="p-desc">
-            Intelligent Python programming mentor powered by LangChain and Groq LLM. Grounds coding inquiries in a curated vector knowledge base with a ChatGPT-style UI and multi-session persistence.
-          </p>
-          <div class="p-tech-list">
-            <span class="p-tech-pill">FastAPI</span>
-            <span class="p-tech-pill">LangChain</span>
-            <span class="p-tech-pill">FAISS</span>
-            <span class="p-tech-pill">MiniLM</span>
-            <span class="p-tech-pill">Groq LLM</span>
-            <span class="p-tech-pill">SQLite</span>
-          </div>
-        </div>
-        <div class="p-actions">
-          <a href="https://github.com/igl2105/RAG-Based-Python-Tutor" target="_blank" rel="noopener noreferrer" class="p-btn-code">
-            <span>📂</span> View Repo
-          </a>
-        </div>
-      </div>
-
-      <!-- Project 06: Card Scanner -->
-      <div class="project-card" data-category="cv-ocr">
-        <div>
-          <div class="p-top">
-            <span class="p-badge p-badge-cv">High-Speed OCR</span>
-            <span class="p-num">06</span>
-          </div>
-          <h3 class="p-title">Rapid Card Scanner & Sheets Sync</h3>
-          <p class="p-desc">
-            Sub-second batch business card digitization suite (&lt;1s extraction, 1,200+ cards/hr). Uses OpenCV auto-deskewing, ONNX RapidOCR + Gemini 2.0 Flash Vision fallback, and live 2-way Google Sheets sync.
-          </p>
-          <div class="p-tech-list">
-            <span class="p-tech-pill">Python</span>
-            <span class="p-tech-pill">FastAPI</span>
-            <span class="p-tech-pill">OpenCV</span>
-            <span class="p-tech-pill">RapidOCR</span>
-            <span class="p-tech-pill">Gemini 2.0 Flash</span>
-            <span class="p-tech-pill">Google Sheets API</span>
-          </div>
-        </div>
-        <div class="p-actions">
-          <a href="https://github.com/igl2105/Card-Scanner-" target="_blank" rel="noopener noreferrer" class="p-btn-code">
-            <span>📂</span> View Repo
-          </a>
-        </div>
-      </div>
-
-      <!-- Project 07: Smart Admission System -->
-      <div class="project-card" data-category="cv-ocr">
-        <div>
-          <div class="p-top">
-            <span class="p-badge p-badge-cv">Multimodal Verification</span>
-            <span class="p-num">07</span>
-          </div>
-          <h3 class="p-title">AI-Powered Smart Admission System</h3>
-          <p class="p-desc">
-            Automated student marksheet verification system. Extracts academic records from PDF marksheets via a resilient fallback pipeline (pdf2json → Tesseract OCR → Gemini Vision) and builds live leaderboard ranking.
-          </p>
-          <div class="p-tech-list">
-            <span class="p-tech-pill">React (Vite)</span>
-            <span class="p-tech-pill">Node.js</span>
-            <span class="p-tech-pill">Express</span>
-            <span class="p-tech-pill">Tesseract OCR</span>
-            <span class="p-tech-pill">Gemini Vision</span>
-            <span class="p-tech-pill">MongoDB Atlas</span>
-          </div>
-        </div>
-        <div class="p-actions">
-          <a href="https://github.com/igl2105/AI-Powered-Smart-Admission-System" target="_blank" rel="noopener noreferrer" class="p-btn-code">
-            <span>📂</span> View Repo
-          </a>
-        </div>
-      </div>
-
-      <!-- Project 08: IntelliTest-AI -->
-      <div class="project-card" data-category="ai-rag">
-        <div>
-          <div class="p-top">
-            <span class="p-badge p-badge-ai">Adaptive Assessment</span>
-            <span class="p-num">08</span>
-          </div>
-          <h3 class="p-title">IntelliTest-AI Assessment Engine</h3>
-          <p class="p-desc">
-            Adaptive technical skill evaluation system. Generates real-time assessment questionnaires using Groq LLMs and performs semantic grading against vector ground truths via sentence transformers.
-          </p>
-          <div class="p-tech-list">
-            <span class="p-tech-pill">Python</span>
-            <span class="p-tech-pill">Flask</span>
-            <span class="p-tech-pill">Groq Llama-3.1-8B</span>
-            <span class="p-tech-pill">FAISS</span>
-            <span class="p-tech-pill">Sentence-Transformers</span>
-            <span class="p-tech-pill">React</span>
-          </div>
-        </div>
-        <div class="p-actions">
-          <a href="https://github.com/igl2105/IntelliTest-AI" target="_blank" rel="noopener noreferrer" class="p-btn-code">
-            <span>📂</span> View Repo
-          </a>
-        </div>
-      </div>
-
-      <!-- Project 09: Advanced Demand Forecasting -->
-      <div class="project-card" data-category="ml-auto">
-        <div>
-          <div class="p-top">
-            <span class="p-badge p-badge-ml">Analytics & Forecasting</span>
-            <span class="p-num">09</span>
-          </div>
-          <h3 class="p-title">Advanced Demand Forecasting System</h3>
-          <p class="p-desc">
-            Machine learning sales forecasting web application. Analyzes historical retail data, applies Polynomial Regression models for future demand projections, computes error metrics, and renders Streamlit UI charts.
-          </p>
-          <div class="p-tech-list">
-            <span class="p-tech-pill">Python</span>
-            <span class="p-tech-pill">Streamlit</span>
-            <span class="p-tech-pill">Scikit-Learn</span>
-            <span class="p-tech-pill">Pandas</span>
-            <span class="p-tech-pill">NumPy</span>
-            <span class="p-tech-pill">Matplotlib</span>
-          </div>
-        </div>
-        <div class="p-actions">
-          <a href="https://github.com/igl2105/Advanced-Demand-Forecasting-System" target="_blank" rel="noopener noreferrer" class="p-btn-code">
-            <span>📂</span> View Repo
-          </a>
-        </div>
-      </div>
-
-      <!-- Project 10: Cold Email Automation -->
-      <div class="project-card" data-category="ml-auto">
-        <div>
-          <div class="p-top">
-            <span class="p-badge p-badge-ml">Infra & Automation</span>
-            <span class="p-num">10</span>
-          </div>
-          <h3 class="p-title">Cold Email Automation Engine</h3>
-          <p class="p-desc">
-            Automated outreach engine supporting dynamic SMTP gateways (Gmail/Outlook), dynamic PDF attachment generation, anti-spam delay throttling, and resilient delivery error retry logging.
-          </p>
-          <div class="p-tech-list">
-            <span class="p-tech-pill">Python</span>
-            <span class="p-tech-pill">SMTPLib</span>
-            <span class="p-tech-pill">MIME</span>
-            <span class="p-tech-pill">Python-Dotenv</span>
-            <span class="p-tech-pill">Regex</span>
-          </div>
-        </div>
-        <div class="p-actions">
-          <a href="https://github.com/igl2105/Cold-Email-Automation" target="_blank" rel="noopener noreferrer" class="p-btn-code">
-            <span>📂</span> View Repo
-          </a>
-        </div>
-      </div>
-
-      <!-- Project 11: DripIt Jersey Store -->
-      <div class="project-card" data-category="fullstack">
-        <div>
-          <div class="p-top">
-            <span class="p-badge p-badge-tc">Interactive Motion</span>
-            <span class="p-num">11</span>
-          </div>
-          <h3 class="p-title">"Drip It" Jersey Store & Designer</h3>
-          <p class="p-desc">
-            Interactive sports apparel customizer and e-commerce web platform. Features dynamic jersey configuration, real-time colorway switches, and motion transitions built with React 19 and Framer Motion.
-          </p>
-          <div class="p-tech-list">
-            <span class="p-tech-pill">React 19</span>
-            <span class="p-tech-pill">Vite</span>
-            <span class="p-tech-pill">Framer Motion</span>
-            <span class="p-tech-pill">React Router</span>
-            <span class="p-tech-pill">CSS</span>
-          </div>
-        </div>
-        <div class="p-actions">
-          <a href="https://github.com/igl2105/dripitt-Project" target="_blank" rel="noopener noreferrer" class="p-btn-code">
-            <span>📂</span> View Repo
-          </a>
-        </div>
-      </div>
-
-      <!-- Project 12: Network Traffic Detector -->
-      <div class="project-card" data-category="ml-auto">
-        <div>
-          <div class="p-top">
-            <span class="p-badge p-badge-ml">Cyber Forensics</span>
-            <span class="p-num">12</span>
-          </div>
-          <h3 class="p-title">Network Traffic Detector & Sniffer</h3>
-          <p class="p-desc">
-            Network packet capture and live protocol telemetry tool. Sniffs live socket data packets via PyShark and Wireshark engine, analyzes IP distribution anomalies, and exports structured forensic logs.
-          </p>
-          <div class="p-tech-list">
-            <span class="p-tech-pill">Python</span>
-            <span class="p-tech-pill">PyShark</span>
-            <span class="p-tech-pill">Wireshark</span>
-            <span class="p-tech-pill">Pandas</span>
-            <span class="p-tech-pill">OpenPyXL</span>
-          </div>
-        </div>
-        <div class="p-actions">
-          <a href="https://github.com/igl2105/IP-Monitering" target="_blank" rel="noopener noreferrer" class="p-btn-code">
-            <span>📂</span> View Repo
-          </a>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Experience & Career Track -->
-  <section class="section-wrap" id="experience">
-    <div class="section-header">
-      <span class="section-tag">Career Journey</span>
-      <h2 class="section-title">Experience & Education</h2>
-      <p class="section-desc">Track record in AI systems engineering, software development, and computer science academics.</p>
-    </div>
-
-    <div class="timeline-wrap">
-      <!-- Role 1: Current -->
-      <div class="timeline-card">
-        <div class="timeline-dot active"></div>
-        <div class="t-header">
-          <h3 class="t-role">AI Engineer</h3>
-          <span class="t-tag-current">CURRENT ROLE</span>
-        </div>
-        <div class="t-company">Trusted Communities</div>
-        <div class="t-date">03/2026 – PRESENT</div>
-        <p class="t-desc">
-          Engineering production-grade AI solutions, LLM workflows, and intelligent automated systems. Focusing on robust vector retrieval pipelines, conversational assistants, and scalable backend services.
-        </p>
-      </div>
-
-      <!-- Role 2: Previous -->
-      <div class="timeline-card">
-        <div class="timeline-dot"></div>
-        <div class="t-header">
-          <h3 class="t-role">Flutter Developer Intern</h3>
-        </div>
-        <div class="t-company">Coruscate Solutions</div>
-        <div class="t-date">05/2024 – 07/2024</div>
-        <p class="t-desc">
-          Engineered cross-platform mobile application features using Flutter and Dart. Integrated REST APIs, implemented reactive state management (Provider), and optimized render performance.
-        </p>
-      </div>
-
-      <!-- Role 3: Education -->
-      <div class="timeline-card">
-        <div class="timeline-dot"></div>
-        <div class="t-header">
-          <h3 class="t-role">B.Tech in Computer Science & Engineering</h3>
-        </div>
-        <div class="t-company">Gujarat, India · CGPA: 8.42</div>
-        <div class="t-date">GRADUATION: 01/2026 (EXPECTED)</div>
-        <p class="t-desc">
-          Specialization in Artificial Intelligence, Machine Learning, Data Science, and Distributed Systems Engineering.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact & Footer -->
-  <section class="section-wrap" id="contact">
-    <div class="footer-box">
-      <h2 class="footer-title">Let's Build Something Extraordinary.</h2>
-      <p class="footer-desc">
-        Interested in collaborating on AI agents, high-performance RAG pipelines, or modern full-stack products? Let's connect.
+      <p class="hero-subtitle">
+        I architect high-throughput AI systems, domain-grounded RAG pipelines with FAISS and LangChain, sub-second OCR extraction engines, and resilient full-stack applications with FastAPI, React 19, and Supabase.
       </p>
 
-      <div class="footer-links">
-        <a href="mailto:igl2105@example.com" class="social-btn">
-          <span>✉️</span> Get in Touch
+      <div class="hero-actions">
+        <a href="#projects" class="btn-primary" aria-label="View Engineering Projects">
+          <span>⚡</span> Explore Case Studies
         </a>
-        <a href="https://github.com/igl2105" target="_blank" rel="noopener noreferrer" class="social-btn">
-          <span>⚡</span> GitHub @igl2105
+        <a href="Vatsal_Resume.pdf" download="Vatsal_Resume_CV.pdf" class="btn-secondary" aria-label="Download Curriculum Vitae">
+          <span>📥</span> Download Engineering CV
         </a>
-        <a href="https://github.com/TCUNIVERSAL" target="_blank" rel="noopener noreferrer" class="social-btn">
-          <span>🌐</span> TC Universal Org
-        </a>
-        <a href="Vatsal_Resume.pdf" download="Vatsal_Resume_CV.pdf" class="social-btn">
-          <span>📄</span> Download Resume
+        <a href="https://github.com/igl2105" target="_blank" rel="noopener noreferrer" class="btn-secondary" aria-label="GitHub Profile of Vatsal Vachhani">
+          <span>📂</span> GitHub @igl2105
         </a>
       </div>
 
-      <div class="footer-bottom">
-        <span>© 2026 Vatsal Vachhani. Crafted with Reflect-Horizon precision. All rights reserved.</span>
+      <!-- Floating Interactive Reflection Cards -->
+      <div class="hero-floating-grid" role="region" aria-label="Core Engineering Pillars">
+        <div class="floating-card float-1">
+          <div class="card-icon" aria-hidden="true">🧠</div>
+          <h2 class="card-title">Production RAG & LLM Workflows</h2>
+          <p class="card-desc">Domain-grounded vector knowledge bases engineered with FAISS, LangChain, and Groq Llama-3.3-70B with conversational semantic memory.</p>
+          <div class="card-metric">⚡ Sub-second Vector Latency</div>
+        </div>
+
+        <div class="floating-card float-2">
+          <div class="card-icon" aria-hidden="true">👁️</div>
+          <h2 class="card-title">High-Throughput Vision & OCR</h2>
+          <p class="card-desc">Sub-second document extraction engines combining OpenCV auto-deskewing, ONNX RapidOCR, and Gemini 2.0 Flash Vision fallback.</p>
+          <div class="card-metric">🚀 1,200+ Documents / Hr</div>
+        </div>
+
+        <div class="floating-card float-3">
+          <div class="card-icon" aria-hidden="true">⚡</div>
+          <h2 class="card-title">Modern Full-Stack & Cloud</h2>
+          <p class="card-desc">Reactive web architectures built with React 19, FastAPI microservices, Supabase real-time synchronization, and Docker containerization.</p>
+          <div class="card-metric">🌐 12+ Production Deployments</div>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <!-- Technical Mastery & Skills Universe -->
+    <section class="section-wrap" id="skills" aria-labelledby="skills-heading">
+      <div class="section-header">
+        <span class="section-tag">Technical Competencies</span>
+        <h2 class="section-title" id="skills-heading">Core Technical Stack & Engineering Capabilities</h2>
+        <p class="section-desc">Deep-domain expertise across production artificial intelligence, vector search algorithms, microservices infrastructure, and reactive frontend architectures.</p>
+      </div>
+
+      <div class="skills-universe-grid">
+        <!-- Group 1 -->
+        <div class="skill-group-card">
+          <div class="skill-group-header">
+            <div class="skill-group-icon" aria-hidden="true">🤖</div>
+            <h3 class="skill-group-name">AI Engineering & Vector Search</h3>
+          </div>
+          <div class="skill-pills-wrap">
+            <span class="skill-pill">Python</span>
+            <span class="skill-pill">RAG Architectures</span>
+            <span class="skill-pill">FAISS Vector DB</span>
+            <span class="skill-pill">LangChain</span>
+            <span class="skill-pill">Groq (Llama-3.3-70B)</span>
+            <span class="skill-pill">Gemini 2.0 Flash</span>
+            <span class="skill-pill">Sentence-Transformers</span>
+            <span class="skill-pill">Vector Embeddings</span>
+          </div>
+        </div>
+
+        <!-- Group 2 -->
+        <div class="skill-group-card">
+          <div class="skill-group-header">
+            <div class="skill-group-icon" aria-hidden="true">👁️</div>
+            <h3 class="skill-group-name">Computer Vision & Data Analytics</h3>
+          </div>
+          <div class="skill-pills-wrap">
+            <span class="skill-pill">OpenCV</span>
+            <span class="skill-pill">RapidOCR (ONNX Runtime)</span>
+            <span class="skill-pill">Tesseract OCR</span>
+            <span class="skill-pill">PyShark / Wireshark</span>
+            <span class="skill-pill">Pandas</span>
+            <span class="skill-pill">NumPy</span>
+            <span class="skill-pill">Scikit-Learn</span>
+            <span class="skill-pill">Predictive Modeling</span>
+          </div>
+        </div>
+
+        <!-- Group 3 -->
+        <div class="skill-group-card">
+          <div class="skill-group-header">
+            <div class="skill-group-icon" aria-hidden="true">⚙️</div>
+            <h3 class="skill-group-name">Backend Architecture & Distributed APIs</h3>
+          </div>
+          <div class="skill-pills-wrap">
+            <span class="skill-pill">FastAPI</span>
+            <span class="skill-pill">Flask</span>
+            <span class="skill-pill">Node.js</span>
+            <span class="skill-pill">Express</span>
+            <span class="skill-pill">MongoDB Atlas</span>
+            <span class="skill-pill">Supabase / PostgreSQL</span>
+            <span class="skill-pill">Docker</span>
+            <span class="skill-pill">RESTful Architecture</span>
+          </div>
+        </div>
+
+        <!-- Group 4 -->
+        <div class="skill-group-card">
+          <div class="skill-group-header">
+            <div class="skill-group-icon" aria-hidden="true">🎨</div>
+            <h3 class="skill-group-name">Frontend Engineering & UI Systems</h3>
+          </div>
+          <div class="skill-pills-wrap">
+            <span class="skill-pill">React 19 / 18</span>
+            <span class="skill-pill">Vite Bundler</span>
+            <span class="skill-pill">Tailwind CSS</span>
+            <span class="skill-pill">TanStack Query</span>
+            <span class="skill-pill">Zustand State Store</span>
+            <span class="skill-pill">Framer Motion</span>
+            <span class="skill-pill">GSAP Animations</span>
+            <span class="skill-pill">Flutter / Dart</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Projects & Missions -->
+    <section class="section-wrap" id="projects" aria-labelledby="projects-heading">
+      <div class="section-header">
+        <span class="section-tag">Production Case Studies</span>
+        <h2 class="section-title" id="projects-heading">Featured Software Engineering Projects</h2>
+        <p class="section-desc">Battle-tested production systems, RAG assistants, agency web platforms, and automated workflow engines built across @igl2105 and @TCUNIVERSAL.</p>
+      </div>
+
+      <!-- Category Filter Bar -->
+      <div class="filter-bar" role="tablist" aria-label="Project Categories">
+        <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All Systems [12]</button>
+        <button class="filter-btn" data-filter="ai-rag" role="tab" aria-selected="false">AI & RAG Pipelines [4]</button>
+        <button class="filter-btn" data-filter="cv-ocr" role="tab" aria-selected="false">Computer Vision & OCR [2]</button>
+        <button class="filter-btn" data-filter="fullstack" role="tab" aria-selected="false">Full-Stack Platforms [3]</button>
+        <button class="filter-btn" data-filter="ml-auto" role="tab" aria-selected="false">ML & Automation [3]</button>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- Project 01: RevFlow AI -->
+        <article class="project-card" data-category="ai-rag">
+          <div>
+            <div class="p-top">
+              <span class="p-badge p-badge-ai">AI Revenue Optimization</span>
+              <span class="p-num">01</span>
+            </div>
+            <h3 class="p-title">RevFlow — AI Hotel Revenue Management System</h3>
+            <p class="p-desc">
+              AI-powered hospitality revenue management platform delivering dynamic room pricing optimization, demand pacing projections, occupancy forecasting, and automated yield maximization algorithms through a sleek minimalist dashboard.
+            </p>
+            <div class="p-tech-list">
+              <span class="p-tech-pill">React</span>
+              <span class="p-tech-pill">AI / ML</span>
+              <span class="p-tech-pill">FastAPI</span>
+              <span class="p-tech-pill">Data Pipeline</span>
+              <span class="p-tech-pill">Tailwind CSS</span>
+            </div>
+          </div>
+          <div class="p-actions">
+            <a href="https://revflow-ai.vercel.app/" target="_blank" rel="noopener noreferrer" class="p-btn-live" aria-label="Launch RevFlow AI Live Platform">
+              <span>⚡</span> Live Transmission
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 02: ThreeDot Software Solutions -->
+        <article class="project-card" data-category="fullstack">
+          <div>
+            <div class="p-top">
+              <span class="p-badge p-badge-tc">TC Universal Agency</span>
+              <span class="p-num">02</span>
+            </div>
+            <h3 class="p-title">ThreeDot AI Solutions Platform</h3>
+            <p class="p-desc">
+              High-performance digital agency platform engineered for ThreeDot Software Solutions under TC Universal. Features inertial Lenis scrolling, cinematic GSAP timeline animations, responsive typography, and interactive service case studies.
+            </p>
+            <div class="p-tech-list">
+              <span class="p-tech-pill">React 18</span>
+              <span class="p-tech-pill">Vite</span>
+              <span class="p-tech-pill">GSAP</span>
+              <span class="p-tech-pill">Lenis Scroll</span>
+              <span class="p-tech-pill">Tailwind CSS</span>
+            </div>
+          </div>
+          <div class="p-actions">
+            <a href="https://threedot-ai-solutions.vercel.app/" target="_blank" rel="noopener noreferrer" class="p-btn-live" aria-label="Launch ThreeDot AI Solutions Live Site">
+              <span>⚡</span> Live Transmission
+            </a>
+            <a href="https://github.com/TCUNIVERSAL/ThreeDot-website" target="_blank" rel="noopener noreferrer" class="p-btn-code" aria-label="View ThreeDot Source Code on GitHub">
+              <span>📂</span> Repo
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 03: Taskflow -->
+        <article class="project-card" data-category="fullstack">
+          <div>
+            <div class="p-top">
+              <span class="p-badge p-badge-tc">TC Universal Full-Stack</span>
+              <span class="p-num">03</span>
+            </div>
+            <h3 class="p-title">Taskflow Workflow Management Suite</h3>
+            <p class="p-desc">
+              Modern collaborative task and project management suite. Implements real-time Supabase PostgreSQL synchronization, optimistic UI state caching via TanStack Query and Zustand, and strict schema validation with Zod.
+            </p>
+            <div class="p-tech-list">
+              <span class="p-tech-pill">React 19</span>
+              <span class="p-tech-pill">Vite</span>
+              <span class="p-tech-pill">Supabase</span>
+              <span class="p-tech-pill">TanStack Query</span>
+              <span class="p-tech-pill">Zustand</span>
+              <span class="p-tech-pill">Zod</span>
+            </div>
+          </div>
+          <div class="p-actions">
+            <a href="https://taskflow-theta-self.vercel.app/dashboard" target="_blank" rel="noopener noreferrer" class="p-btn-live" aria-label="Launch Taskflow Dashboard Live Application">
+              <span>⚡</span> Live Transmission
+            </a>
+            <a href="https://github.com/TCUNIVERSAL/Taskflow" target="_blank" rel="noopener noreferrer" class="p-btn-code" aria-label="View Taskflow Repository on GitHub">
+              <span>📂</span> Repo
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 04: RAG-Based AI Assistant -->
+        <article class="project-card" data-category="ai-rag">
+          <div>
+            <div class="p-top">
+              <span class="p-badge p-badge-ai">Production RAG Architecture</span>
+              <span class="p-num">04</span>
+            </div>
+            <h3 class="p-title">RAG-Based AI Knowledge Assistant</h3>
+            <p class="p-desc">
+              Production Retrieval-Augmented Generation assistant engineered for Very Mulberry farm (USA). Integrates Groq (Llama-3.3-70B) with FAISS vector index embeddings to deliver domain-grounded seasonal advice, pricing metrics, and conversational memory.
+            </p>
+            <div class="p-tech-list">
+              <span class="p-tech-pill">React</span>
+              <span class="p-tech-pill">Flask</span>
+              <span class="p-tech-pill">FAISS</span>
+              <span class="p-tech-pill">Groq Llama-3.3-70B</span>
+              <span class="p-tech-pill">MongoDB</span>
+              <span class="p-tech-pill">Docker</span>
+            </div>
+          </div>
+          <div class="p-actions">
+            <a href="https://github.com/igl2105/RAG-Based-Ai-Assistant" target="_blank" rel="noopener noreferrer" class="p-btn-code" aria-label="View RAG AI Assistant Source Code on GitHub">
+              <span>📂</span> View Repo
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 05: RAG-Based Python Tutor -->
+        <article class="project-card" data-category="ai-rag">
+          <div>
+            <div class="p-top">
+              <span class="p-badge p-badge-ai">LLM Knowledge Base</span>
+              <span class="p-num">05</span>
+            </div>
+            <h3 class="p-title">RAG-Based Python Programming Mentor</h3>
+            <p class="p-desc">
+              Interactive programming mentor powered by LangChain and Groq LLMs. Grounds coding inquiries in a curated vector knowledge base covering syntax, OOP, algorithms, and databases with searchable multi-session history.
+            </p>
+            <div class="p-tech-list">
+              <span class="p-tech-pill">FastAPI</span>
+              <span class="p-tech-pill">LangChain</span>
+              <span class="p-tech-pill">FAISS</span>
+              <span class="p-tech-pill">MiniLM</span>
+              <span class="p-tech-pill">Groq LLM</span>
+              <span class="p-tech-pill">SQLite</span>
+            </div>
+          </div>
+          <div class="p-actions">
+            <a href="https://github.com/igl2105/RAG-Based-Python-Tutor" target="_blank" rel="noopener noreferrer" class="p-btn-code" aria-label="View Python Tutor Repository on GitHub">
+              <span>📂</span> View Repo
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 06: Card Scanner -->
+        <article class="project-card" data-category="cv-ocr">
+          <div>
+            <div class="p-top">
+              <span class="p-badge p-badge-cv">High-Speed OCR Engine</span>
+              <span class="p-num">06</span>
+            </div>
+            <h3 class="p-title">Rapid Business Card Scanner & Cloud Sync</h3>
+            <p class="p-desc">
+              Sub-second batch business card digitization suite (&lt;1s extraction, 1,200+ cards/hr). Uses OpenCV for real-time auto-deskewing, ONNX RapidOCR + Gemini 2.0 Flash Vision fallback, and live 2-way Google Sheets & CSV synchronization.
+            </p>
+            <div class="p-tech-list">
+              <span class="p-tech-pill">Python</span>
+              <span class="p-tech-pill">FastAPI</span>
+              <span class="p-tech-pill">OpenCV</span>
+              <span class="p-tech-pill">RapidOCR</span>
+              <span class="p-tech-pill">Gemini 2.0 Flash</span>
+              <span class="p-tech-pill">Google Sheets API</span>
+            </div>
+          </div>
+          <div class="p-actions">
+            <a href="https://github.com/igl2105/Card-Scanner-" target="_blank" rel="noopener noreferrer" class="p-btn-code" aria-label="View Card Scanner Repository on GitHub">
+              <span>📂</span> View Repo
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 07: Smart Admission System -->
+        <article class="project-card" data-category="cv-ocr">
+          <div>
+            <div class="p-top">
+              <span class="p-badge p-badge-cv">Multimodal Document Verification</span>
+              <span class="p-num">07</span>
+            </div>
+            <h3 class="p-title">AI-Powered Smart Admission System</h3>
+            <p class="p-desc">
+              Automated student admission workflow that validates academic credentials from uploaded 10th/12th/Diploma marksheet PDFs via a multi-stage extraction pipeline (pdf2json → Tesseract OCR → Gemini Vision) and builds live leaderboard rankings.
+            </p>
+            <div class="p-tech-list">
+              <span class="p-tech-pill">React (Vite)</span>
+              <span class="p-tech-pill">Node.js</span>
+              <span class="p-tech-pill">Express</span>
+              <span class="p-tech-pill">Tesseract OCR</span>
+              <span class="p-tech-pill">Gemini Vision</span>
+              <span class="p-tech-pill">MongoDB Atlas</span>
+            </div>
+          </div>
+          <div class="p-actions">
+            <a href="https://github.com/igl2105/AI-Powered-Smart-Admission-System" target="_blank" rel="noopener noreferrer" class="p-btn-code" aria-label="View Smart Admission System Repository on GitHub">
+              <span>📂</span> View Repo
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 08: IntelliTest-AI -->
+        <article class="project-card" data-category="ai-rag">
+          <div>
+            <div class="p-top">
+              <span class="p-badge p-badge-ai">Adaptive Assessment Engine</span>
+              <span class="p-num">08</span>
+            </div>
+            <h3 class="p-title">IntelliTest-AI Adaptive Assessment Engine</h3>
+            <p class="p-desc">
+              Real-time technical skill evaluation platform. Synthesizes adaptive assessment questionnaires on the fly using Groq LLMs and performs automated semantic grading against vector ground truths via sentence-transformers.
+            </p>
+            <div class="p-tech-list">
+              <span class="p-tech-pill">Python</span>
+              <span class="p-tech-pill">Flask</span>
+              <span class="p-tech-pill">Groq Llama-3.1-8B</span>
+              <span class="p-tech-pill">FAISS</span>
+              <span class="p-tech-pill">Sentence-Transformers</span>
+              <span class="p-tech-pill">React</span>
+            </div>
+          </div>
+          <div class="p-actions">
+            <a href="https://github.com/igl2105/IntelliTest-AI" target="_blank" rel="noopener noreferrer" class="p-btn-code" aria-label="View IntelliTest AI Repository on GitHub">
+              <span>📂</span> View Repo
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 09: Advanced Demand Forecasting -->
+        <article class="project-card" data-category="ml-auto">
+          <div>
+            <div class="p-top">
+              <span class="p-badge p-badge-ml">Predictive Analytics</span>
+              <span class="p-num">09</span>
+            </div>
+            <h3 class="p-title">Advanced Demand Forecasting & Sales Analytics</h3>
+            <p class="p-desc">
+              Machine learning sales forecasting web application. Analyzes historical retail transactions, applies Polynomial Regression models for future demand projection, calculates error metrics (MAE/MSE), and visualizes interactive forecasts.
+            </p>
+            <div class="p-tech-list">
+              <span class="p-tech-pill">Python</span>
+              <span class="p-tech-pill">Streamlit</span>
+              <span class="p-tech-pill">Scikit-Learn</span>
+              <span class="p-tech-pill">Pandas</span>
+              <span class="p-tech-pill">NumPy</span>
+              <span class="p-tech-pill">Matplotlib</span>
+            </div>
+          </div>
+          <div class="p-actions">
+            <a href="https://github.com/igl2105/Advanced-Demand-Forecasting-System" target="_blank" rel="noopener noreferrer" class="p-btn-code" aria-label="View Demand Forecasting System Repository on GitHub">
+              <span>📂</span> View Repo
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 10: Cold Email Automation -->
+        <article class="project-card" data-category="ml-auto">
+          <div>
+            <div class="p-top">
+              <span class="p-badge p-badge-ml">Delivery Automation</span>
+              <span class="p-num">10</span>
+            </div>
+            <h3 class="p-title">Cold Email Outreach & Automation Engine</h3>
+            <p class="p-desc">
+              Automated email distribution and outreach system in Python. Features dynamic SMTP gateway routing (Gmail/Outlook), automated personalized PDF pitch deck attachments, anti-spam throttling, and delivery retry logging.
+            </p>
+            <div class="p-tech-list">
+              <span class="p-tech-pill">Python</span>
+              <span class="p-tech-pill">SMTPLib</span>
+              <span class="p-tech-pill">MIME</span>
+              <span class="p-tech-pill">Python-Dotenv</span>
+              <span class="p-tech-pill">Regex</span>
+            </div>
+          </div>
+          <div class="p-actions">
+            <a href="https://github.com/igl2105/Cold-Email-Automation" target="_blank" rel="noopener noreferrer" class="p-btn-code" aria-label="View Cold Email Engine Repository on GitHub">
+              <span>📂</span> View Repo
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 11: DripIt Jersey Store -->
+        <article class="project-card" data-category="fullstack">
+          <div>
+            <div class="p-top">
+              <span class="p-badge p-badge-tc">Motion Commerce</span>
+              <span class="p-num">11</span>
+            </div>
+            <h3 class="p-title">"Drip It" Custom Apparel E-Commerce Platform</h3>
+            <p class="p-desc">
+              Interactive sports apparel designer and e-commerce web platform. Implements real-time jersey configuration, dynamic colorway switches, and physics-based motion transitions with React 19 and Framer Motion.
+            </p>
+            <div class="p-tech-list">
+              <span class="p-tech-pill">React 19</span>
+              <span class="p-tech-pill">Vite</span>
+              <span class="p-tech-pill">Framer Motion</span>
+              <span class="p-tech-pill">React Router</span>
+              <span class="p-tech-pill">CSS</span>
+            </div>
+          </div>
+          <div class="p-actions">
+            <a href="https://github.com/igl2105/dripitt-Project" target="_blank" rel="noopener noreferrer" class="p-btn-code" aria-label="View DripIt Apparel Platform Repository on GitHub">
+              <span>📂</span> View Repo
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 12: Network Traffic Detector -->
+        <article class="project-card" data-category="ml-auto">
+          <div>
+            <div class="p-top">
+              <span class="p-badge p-badge-ml">Network Telemetry</span>
+              <span class="p-num">12</span>
+            </div>
+            <h3 class="p-title">Network Traffic Telemetry & Packet Sniffer</h3>
+            <p class="p-desc">
+              Real-time network packet capture and protocol telemetry utility. Sniffs live socket data packets via PyShark and Wireshark engine, analyzes IP distribution anomalies, and exports structured forensic logs to Excel.
+            </p>
+            <div class="p-tech-list">
+              <span class="p-tech-pill">Python</span>
+              <span class="p-tech-pill">PyShark</span>
+              <span class="p-tech-pill">Wireshark</span>
+              <span class="p-tech-pill">Pandas</span>
+              <span class="p-tech-pill">OpenPyXL</span>
+            </div>
+          </div>
+          <div class="p-actions">
+            <a href="https://github.com/igl2105/IP-Monitering" target="_blank" rel="noopener noreferrer" class="p-btn-code" aria-label="View Network Telemetry Tool Repository on GitHub">
+              <span>📂</span> View Repo
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Experience & Career Track -->
+    <section class="section-wrap" id="experience" aria-labelledby="experience-heading">
+      <div class="section-header">
+        <span class="section-tag">Career Milestones</span>
+        <h2 class="section-title" id="experience-heading">Professional Experience & Education</h2>
+        <p class="section-desc">Track record in engineering production artificial intelligence systems, reactive frontend interfaces, and academic computer science foundation.</p>
+      </div>
+
+      <div class="timeline-wrap">
+        <!-- Role 1: Current -->
+        <div class="timeline-card">
+          <div class="timeline-dot active" aria-hidden="true"></div>
+          <div class="t-header">
+            <h3 class="t-role">AI Engineer</h3>
+            <span class="t-tag-current">CURRENT ROLE</span>
+          </div>
+          <div class="t-company">Trusted Communities</div>
+          <div class="t-date">03/2026 – PRESENT</div>
+          <p class="t-desc">
+            Leading the development of production AI agents, LLM orchestration workflows, and domain-grounded RAG pipelines. Architecting resilient vector search microservices, automated OCR processing pipelines, and high-performance backend systems with Python and FastAPI.
+          </p>
+        </div>
+
+        <!-- Role 2: Previous -->
+        <div class="timeline-card">
+          <div class="timeline-dot" aria-hidden="true"></div>
+          <div class="t-header">
+            <h3 class="t-role">Flutter Developer Intern</h3>
+          </div>
+          <div class="t-company">Coruscate Solutions</div>
+          <div class="t-date">05/2024 – 07/2024</div>
+          <p class="t-desc">
+            Engineered cross-platform mobile application modules using Flutter and Dart. Integrated asynchronous RESTful APIs, implemented reactive state management (Provider), and optimized render performance across Android and iOS.
+          </p>
+        </div>
+
+        <!-- Role 3: Education -->
+        <div class="timeline-card">
+          <div class="timeline-dot" aria-hidden="true"></div>
+          <div class="t-header">
+            <h3 class="t-role">B.Tech in Computer Science & Engineering</h3>
+          </div>
+          <div class="t-company">Gujarat, India · CGPA: 8.42 / 10.0</div>
+          <div class="t-date">GRADUATION: 01/2026 (EXPECTED)</div>
+          <p class="t-desc">
+            Rigorous curriculum focused on Artificial Intelligence, Machine Learning Algorithms, Data Structures, Distributed Systems, and Database Management Systems.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact & Footer -->
+    <section class="section-wrap" id="contact" aria-labelledby="contact-heading">
+      <div class="footer-box">
+        <h2 class="footer-title" id="contact-heading">Let's Engineer High-Impact AI Solutions Together.</h2>
+        <p class="footer-desc">
+          Whether you're looking for an AI Engineer to architect RAG pipelines, deploy autonomous LLM agents, or develop scalable full-stack web platforms, I'm open to high-impact opportunities and collaborations.
+        </p>
+
+        <div class="footer-links">
+          <a href="mailto:igl2105@example.com" class="social-btn" aria-label="Send Email to Vatsal Vachhani">
+            <span>✉️</span> Start a Conversation
+          </a>
+          <a href="https://github.com/igl2105" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Explore GitHub Profile">
+            <span>⚡</span> GitHub @igl2105
+          </a>
+          <a href="https://github.com/TCUNIVERSAL" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Explore TC Universal Organization on GitHub">
+            <span>🌐</span> TC Universal Org
+          </a>
+          <a href="Vatsal_Resume.pdf" download="Vatsal_Resume_CV.pdf" class="social-btn" aria-label="Download Curriculum Vitae">
+            <span>📄</span> Download Engineering CV
+          </a>
+        </div>
+
+        <div class="footer-bottom">
+          <span>© 2026 Vatsal Vachhani. Crafted with Reflect-Horizon precision & Semantic SEO Architecture. All rights reserved.</span>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <!-- Interactive JavaScript Engine -->
   <script>
@@ -1624,8 +1691,12 @@
 
     filterButtons.forEach(btn => {
       btn.addEventListener('click', () => {
-        filterButtons.forEach(b => b.classList.remove('active'));
+        filterButtons.forEach(b => {
+          b.classList.remove('active');
+          b.setAttribute('aria-selected', 'false');
+        });
         btn.classList.add('active');
+        btn.setAttribute('aria-selected', 'true');
 
         const filter = btn.getAttribute('data-filter');
 
